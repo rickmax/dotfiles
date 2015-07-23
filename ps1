@@ -15,12 +15,16 @@ __ruby_ps1 () {
   fi
 }
 
-if ! command -v __git_ps1 > /dev/null; then
-  __git_ps1 () {
-    :
-  }
-fi
+#if ! command -v __git_ps1 > /dev/null; then
+#  __git_ps1 () {
+#    :
+#  }
+#fi
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
 # ~/Developer (1.9.3-p327) (master)
 # ¥
-PS1="\h$\w $RED\$(__ruby_ps1 '(%s)') $GREEN\$(__git_ps1 '(%s)')\n${WHITE}¥$NO_COLOR "
+PS1="\h$\w $RED\$(__ruby_ps1 '(%s)') $GREEN\$(parse_git_branch)\n${WHITE}¥$NO_COLOR "
