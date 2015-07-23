@@ -22,5 +22,5 @@ if ! command -v __git_ps1 > /dev/null; then
 fi
 
 # ~/Developer (1.9.3-p327) (master)
-# λ
-PS1="\n\w $GREEN\$(__ruby_ps1 '(%s)') $RED\$(__git_ps1 '(%s)')\n${WHITE}λ$NO_COLOR "
+# ¥
+PS1="\n\w $GREEN\$(__ruby_ps1 '(%s)') $RED\$(__git_ps1 '(%s)')\n${WHITE}¥$NO_COLOR "
