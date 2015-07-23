@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# attach homebrew bin path
+if [ -d /usr/local/bin ]; then
+  export PATH=/usr/local/bin:$PATH
+fi
+
+# attach homebrew sbin path
+if [ -d /usr/local/sbin ]; then
+  export PATH=/usr/local/sbin:$PATH
+fi
+
+# bash-completion
+if [ -f /usr/local/etc/bash_completion ]; then
+  source /usr/local/etc/bash_completion
+elif [ -f /etc/bash_completion ]; then
+  source /etc/bash_completion
+fi

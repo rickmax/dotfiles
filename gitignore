@@ -1,0 +1,8 @@
+*.pyc
+*.sw?
+.DS_Store
+.env
+.rbenv-version
+.ruby-version
+.rvmrc
+vendor/bundle
