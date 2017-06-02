@@ -8,7 +8,7 @@ This is my dotfiles for Mac OS X.
 
 Clone the repository:
 
-    $ git clone https://github.com/rickmax/dotfiles.git
+    $ git clone https://github.com/rickmax/dotfiles
 
 And run the install:
 
